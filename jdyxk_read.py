@@ -6,9 +6,9 @@ def title():
     print("")
     print("")
     print('+------------------------------------------------------------')
-    print('jd云星空任意文件读取-----漏洞检测------------------------------')
+    print('jdyxk任意文件读取-----漏洞检测------------------------------')
     print("仅限学习使用或安全排查使用，请勿用于非法测试！")
-    print('使用方式：jdyk_read.py -u http://www.example.com -file 文件绝对路径')
+    print('使用方式：jdyxk_read.py -u http://www.example.com -file 文件绝对路径')
     print('+------------------------------------------------------------')
     print("")
 def poc(url,file):
@@ -22,7 +22,11 @@ def poc(url,file):
     except:
         print("请检查目标是否可访问")
         sys.exit()
-    print(req.text.encode("iso-8859-1").decode("utf-8"))
+    try:
+        print(req.text.encode("iso-8859-1").decode("utf-8"))
+    except:
+        print(req.text)
+
 def arg():
     parser = argparse.ArgumentParser(description="Simple command line tool")
     parser.add_argument("-u", "--url", required=True, help="URL to target")
