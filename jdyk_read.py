@@ -22,7 +22,7 @@ def poc(url,file):
     except:
         print("请检查目标是否可访问")
         sys.exit()
-    print(req.text)
+    print(req.text.encode("iso-8859-1").decode("utf-8"))
 def arg():
     parser = argparse.ArgumentParser(description="Simple command line tool")
     parser.add_argument("-u", "--url", required=True, help="URL to target")
