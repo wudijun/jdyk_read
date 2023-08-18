@@ -1,4 +1,4 @@
-# jdyk_read
+# jdyxk_read
 此脚本用来验证金X云X空任意文件读取漏洞，仅限学习使用，请勿用于非法测试等使用！！！
 # 使用方法
 jdyxk_read.py -u http://www.example.com -file 文件绝对路径
